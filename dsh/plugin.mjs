@@ -57,7 +57,9 @@ const provider = {
       }
     }))
   },
-  async get(name) {
+  // DSH passes the SkillCandidate listed above, not the bare name.
+  async get(candidate) {
+    const name = candidate.name
     if (!SKILLS.includes(name)) return undefined
     const { dir, description, content } = await readSkill(name)
     return {
