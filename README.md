@@ -167,6 +167,14 @@ Then open `/hooks` in Codex, trust its two lifecycle hooks, and start a new thre
 
 **Any other agent:** copy [`AGENTS.md`](AGENTS.md) into your project, or ask your agent to install [`skills/ponytail/SKILL.md`](skills/ponytail/SKILL.md) as a skill. Step by step for Copilot, Cursor, OpenCode, Gemini and the rest: **[INSTALL.md](INSTALL.md)**.
 
+**DeepSeek Harness** (this fork ships a bundle), one command:
+
+```bash
+dsh plugin --profile desktop add github:Zfeng08/ponytail
+```
+
+It installs the bundle and enables it; on the next DSH start it registers the six skills and seeds `~/.dsh/AGENTS.md` if you have none (an existing one is never touched). Steps that need no plugin at all: drop [`AGENTS.md`](AGENTS.md) at `~/.dsh/AGENTS.md` and the six `skills/*/SKILL.md` into `~/.dsh/skills/<name>/`.
+
 That was it. He'd be proud. He won't say it.
 
 Active every session, with a handful of commands (see [Commands](#commands)). `/ponytail ultra` exists for when the codebase has wronged you personally. Startup and mode-change text shows the current mode.
