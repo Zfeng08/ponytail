@@ -19,12 +19,14 @@
   "main": "./.opencode/plugins/ponytail.mjs",
   "exports": {
     ".": "./.opencode/plugins/ponytail.mjs",
-    "./plugin": "./.opencode/plugins/ponytail.mjs"
+    "./plugin": "./.opencode/plugins/ponytail.mjs",
+    "./dsh-plugin": "./dsh/plugin.mjs"
   },
   "files": [
     "AGENTS.md",
     "hooks/",
     "skills/",
+    "dsh/",
     ".opencode/",
     ".qoder/",
     ".qoder-plugin/",
@@ -40,6 +42,11 @@
   "pi": {
     "extensions": ["./pi-extension/index.js"],
     "skills": ["./skills"]
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh/cordis.patch.yml"
+    }
   },
   "publishConfig": {
     "access": "public"
